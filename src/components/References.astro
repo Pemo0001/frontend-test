@@ -1,0 +1,59 @@
+<section class="references">
+  <div class="referencescontent">
+    <img alt="Toggle" id="toggle-button" class="toggle-button" src="public/foldoutbtn.svg" />
+    <h3>References</h3>
+    <div id="foldout-area" class="foldout-area">
+      <p>References go here.</p>
+    </div>
+  </div>
+</section>
+
+<script>
+  // Get the toggle button and foldout area
+  const toggleButton = document.getElementById("toggle-button");
+  const foldoutArea = document.getElementById("foldout-area");
+
+  // Add a click event listener to the toggle button
+  toggleButton.addEventListener("click", () => {
+    // Toggle the 'open' class on the foldout area
+    foldoutArea.classList.toggle("open");
+
+    // Adjust height to auto if open
+    if (foldoutArea.classList.contains("open")) {
+      foldoutArea.style.height = foldoutArea.scrollHeight + "px";
+    } else {
+      foldoutArea.style.height = "0";
+    }
+  });
+</script>
+
+<style>
+  .references {
+    margin-top: 3px;
+    background-color: #e6e7e8;
+  }
+
+  .referencescontent {
+    max-width: 1146px;
+    margin: 0 auto;
+    padding: 1rem 20px 2rem 20px;
+  }
+
+  .referencescontent img {
+    margin-right: 1.5rem;
+    cursor: pointer;
+    float: left;
+  }
+
+  .foldout-area {
+    clear: both;
+    overflow: hidden;
+    height: 0;
+    transition: height 0.3s ease-out;
+  }
+
+  .foldout-area.open {
+    height: auto;
+    margin-top: 3rem;
+  }
+</style>
