@@ -15,13 +15,43 @@ import Button from "../components/Button.astro";
     </div>
   </div>
 
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const observer = new IntersectionObserver(
+        (entries, observer) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add("visible"); // Add the "visible" class to trigger the animation
+              observer.unobserve(entry.target); // Optional: Stop observing after the animation
+            }
+          });
+        },
+        {
+          threshold: 0.1, // Trigger when 10% of the element is visible
+        }
+      );
+
+      const target = document.querySelectorAll(".watchvideosection");
+      target.forEach((element) => observer.observe(element));
+    });
+  </script>
+
   <style>
     p {
       margin: 0.5rem 0;
     }
     .watchvideosection {
       background-color: #eee;
-      padding: 30px;
+      opacity: 0;
+      transform: translateX(-100px); /* Optional: Adds a slide-up effect */
+      transition:
+        opacity 2s ease-out,
+        transform 0.9s ease-out;
+    }
+
+    .watchvideosection.visible {
+      opacity: 1;
+      transform: translateY(0);
     }
 
     .duration {
@@ -33,23 +63,36 @@ import Button from "../components/Button.astro";
     }
 
     h2 {
-      margin-bottom: 2rem;
+      max-width: 1146px;
+      margin: 3rem auto 2rem auto;
+      padding-left: 2rem;
+      padding-right: 2rem;
+      padding-top: 3rem;
+    }
+
+    .grid_1_1 {
+      max-width: 1146px;
+      margin: 0 auto;
+      padding-left: 2rem;
+      padding-right: 2rem;
+      padding-bottom: 3rem;
+    }
+
+    img {
+      width: 100%;
     }
     @media only screen and (min-width: 1200px) {
       .watchvideosection {
         padding: 91px;
       }
+
       h2 {
-        max-width: 1082px;
-        margin: 0 auto;
-        margin-bottom: 2rem;
+        margin-top: 0;
       }
       .grid_1_1 {
         display: grid;
         grid-template-columns: 1fr 1fr;
         gap: 2rem;
-        max-width: 1082px;
-        margin: 0 auto;
       }
 
       .flex_item {

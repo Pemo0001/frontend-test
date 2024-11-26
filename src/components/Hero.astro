@@ -8,15 +8,30 @@
 <style>
   .herosection {
     height: 405px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .herosection::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
     background-image: url(public/adtralza-hero-image2.png);
+    animation: fadeIn 1s;
     background-repeat: no-repeat;
     background-size: cover;
+    background-position-x: center;
+    filter: brightness(0.5);
+    z-index: -1;
   }
 
   .herosection_content {
-    max-width: 1082px;
+    max-width: 1146px;
     margin: 0 auto;
-    padding: 60px 0;
+    padding: 60px 2rem;
   }
 
   .adtralza_logo {
@@ -29,5 +44,12 @@
 
   h2 {
     color: white;
+    font-size: 1.5rem;
+  }
+
+  @media only screen and (min-width: 900px) {
+    .herosection::before {
+      filter: brightness(1);
+    }
   }
 </style>

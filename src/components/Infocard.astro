@@ -12,12 +12,40 @@ const { infocard_a } = Astro.props;
   <a href="">{infocard_a}</a>
 </div>
 
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const observer = new IntersectionObserver(
+      (entries, observer) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("visible");
+            observer.unobserve(entry.target);
+          }
+        });
+      },
+      {
+        threshold: 0.2,
+      }
+    );
+
+    const target = document.querySelectorAll(".infocard");
+    target.forEach((element) => observer.observe(element));
+  });
+</script>
+
 <style>
   .infocard {
     width: 278px;
     text-align: center;
     margin-top: 75px;
     margin-bottom: 97px;
+    opacity: 0;
+    transition: opacity 2s ease-out;
+  }
+
+  .infocard.visible {
+    opacity: 1;
+    transform: translateY(0);
   }
 
   .infocard h3,

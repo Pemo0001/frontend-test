@@ -62,7 +62,39 @@ ul li {
   margin: 0 auto;
 }
 
+.clinicaltools {
+  margin: 4rem 0;
+}
+
+.clinicaltools_grid {
+  max-width: 1146px;
+  margin: 0 auto;
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+
+.clinicaltools h2 {
+  max-width: 1146px;
+  margin: 0 auto;
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
 @media only screen and (min-width: 900px) {
+  #wrapper {
+    max-width: 1442px;
+    margin: 34px auto;
+  }
+
   .infocard_grid {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
@@ -73,13 +105,10 @@ ul li {
   .clinicaltools_grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    max-width: 1082px;
-    margin: 0 auto;
   }
 
   .clinicaltools {
-    max-width: 1082px;
-    margin: 0 auto;
+    margin: 0;
     padding: 121px 0;
   }
 }

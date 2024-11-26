@@ -18,6 +18,11 @@ import Button from "../components/Button.astro";
 </section>
 
 <style>
+  .grid_1_1 {
+    max-width: 1146px;
+    margin: 0 auto;
+    padding: 3rem 2rem;
+  }
   .learnmore {
     background-color: #eee;
   }
@@ -25,12 +30,15 @@ import Button from "../components/Button.astro";
   p {
     font-size: 1.125rem;
   }
-  @media only screen and (min-width: 1200px) {
+
+  img {
+    width: 100%;
+  }
+
+  @media only screen and (min-width: 900px) {
     .grid_1_1 {
       display: grid;
       grid-template-columns: 1fr 1fr;
-      max-width: 1082px;
-      margin: 0 auto;
     }
 
     .flex_item {

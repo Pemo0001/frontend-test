@@ -25,6 +25,10 @@
 
   .footer-grid {
     padding-top: 108px;
+    max-width: 1146px;
+    margin: 0 auto;
+    padding-left: 2rem;
+    padding-right: 2rem;
   }
 
   .copyright {
@@ -39,16 +43,33 @@
     font-style: italic;
   }
 
-  li {
-    float: left;
+  .footer-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
   }
 
-  @media only screen and (min-width: 1200px) {
-    .footer-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      max-width: 1082px;
-      margin: 0 auto;
+  .footermenu ul {
+    color: #fff;
+    display: flex;
+    justify-content: center;
+  }
+
+  .footermenu ul li {
+    margin: 3rem 0;
+    padding: 0 1rem;
+    font-style: normal;
+    border-right: 1px white solid;
+    opacity: 0.6;
+    font-size: 0.6rem;
+  }
+
+  .footermenu ul li:nth-child(6) {
+    border-right: none;
+  }
+
+  @media only screen and (min-width: 900px) {
+    .footermenu ul li {
+      font-size: 1rem;
     }
   }
 </style>
