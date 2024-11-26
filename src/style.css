@@ -57,11 +57,16 @@ ul li {
   font-style: italic;
 }
 
-@media only screen and (min-width: 1200px) {
+.infocard_grid {
+  width: 278px;
+  margin: 0 auto;
+}
+
+@media only screen and (min-width: 900px) {
   .infocard_grid {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    max-width: 1082px;
+    width: 1082px;
     margin: 0 auto;
   }
 

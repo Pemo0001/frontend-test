@@ -8,7 +8,7 @@
         <input type="text" placeholder="SEARCH" />
         <img src="public/search.svg" />
       </div>
-      <div class="logout">Logout <img src="public/login.svg" /></div>
+      <div class="logout"><span>Logout</span><img src="public/login.svg" /></div>
     </div>
   </div>
 </header>
@@ -16,38 +16,40 @@
 <style>
   .topbar {
     max-width: 1082px;
-    margin: 0 auto;
+    margin: 0 auto 48px auto;
   }
   .dermaworld-logo {
     width: 158px;
   }
   .searchbar {
     position: relative;
-    width: 300px; /* Adjust based on your design */
+    width: 354px;
   }
 
   .searchbar input {
     width: 100%;
-    padding-right: 40px; /* Space for the icon */
-    padding-left: 10px;
-    height: 40px;
-    box-sizing: border-box;
+    padding-right: 26.5px;
+    padding-left: 26.5px;
+    height: 51px;
     border: 1px solid #ccc;
-    border-radius: 20px;
-    font-size: 16px;
+    border-radius: 25.5px;
+    font-size: 0.75rem;
   }
 
   .searchbar img {
     position: absolute;
-    right: 10px; /* Space between the icon and the edge */
+    right: 20px;
     top: 50%;
     transform: translateY(-50%);
-    width: 20px; /* Adjust based on your icon size */
-    height: 20px;
-    pointer-events: none; /* Prevent the icon from interfering with input focus */
+    pointer-events: none;
   }
 
-  @media only screen and (min-width: 1200px) {
+  span {
+    margin: 0 0.5rem 0 3rem;
+    font-family: "Source Sans 3", sans-serif;
+  }
+
+  @media only screen and (min-width: 800px) {
     .topbar {
       display: flex;
       justify-content: space-between;
@@ -55,6 +57,8 @@
 
     .flex_item {
       display: flex;
+      align-items: center;
+      opacity: 0.8;
     }
   }
 </style>
