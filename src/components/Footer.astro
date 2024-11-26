@@ -23,7 +23,32 @@
     background-color: #00609c;
   }
 
+  .footer-grid {
+    padding-top: 108px;
+  }
+
+  .copyright {
+    text-align: right;
+    color: #fff;
+    font-size: 0.9rem;
+    line-height: 25px;
+  }
+
+  .copyright a {
+    color: #fff;
+    font-style: italic;
+  }
+
   li {
     float: left;
+  }
+
+  @media only screen and (min-width: 1200px) {
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      max-width: 1082px;
+      margin: 0 auto;
+    }
   }
 </style>

@@ -1,0 +1,110 @@
+<nav class="navigation">
+  <!-- Top-level menu -->
+  <ul class="navigation-top">
+    <li class="navigation-item">
+      <a href="#">Bedingungen</a>
+      <ul class="subnavigation">
+        <li><a href="#">Adtralza</a></li>
+        <li><a href="#">Diavonex</a></li>
+        <li><a href="#">Diavobet</a></li>
+        <li><a href="#">Enstilar</a></li>
+        <li><a href="#">Fucidin</a></li>
+        <li><a href="#">Kyntheum</a></li>
+        <li><a href="#">Protopic</a></li>
+        <li><a href="#">Skinoren</a></li>
+        <li><a href="#">Tralokinumab</a></li>
+        <li><a href="#">Xamiol</a></li>
+      </ul>
+    </li>
+    <li class="menu-item">
+      <a href="#">Behandlungen</a>
+      <ul class="submenu">
+        <li><a href="#">Overview</a></li>
+        <li><a href="#">Mode of Action</a></li>
+        <li><a href="#">Efficacy</a></li>
+        <li><a href="#">Quality of Life</a></li>
+        <li><a href="#">Safety</a></li>
+        <li><a href="#">Dosing</a></li>
+        <li><a href="#">News</a></li>
+        <li><a href="#">Technical Information</a></li>
+      </ul>
+    </li>
+    <li class="menu-item"><a href="#">Veranstaltungen</a></li>
+    <li class="menu-item"><a href="#">Werkzeuge</a></li>
+    <li class="menu-item"><a href="#">Forschung und Erkenntnisse</a></li>
+  </ul>
+</nav>
+
+<style>
+  .menu {
+    background-color: #fff;
+    border-bottom: 2px solid #ccc;
+  }
+
+  .menu-top {
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    margin: 0;
+    padding: 10px 0;
+  }
+
+  .menu-item {
+    position: relative;
+  }
+
+  .menu-top a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    font-size: 16px;
+  }
+
+  .menu-top a:hover {
+    color: blue;
+  }
+
+  .submenu {
+    list-style: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #f5f5f5;
+    border: 1px solid #ccc;
+    padding: 10px 0;
+    display: none; /* Hidden by default */
+    z-index: 10;
+  }
+
+  .submenu li {
+    padding: 5px 20px;
+  }
+
+  .submenu li a {
+    color: #0066cc;
+    text-decoration: none;
+  }
+
+  .submenu li a:hover {
+    text-decoration: underline;
+  }
+
+  .menu-item:hover .submenu {
+    display: block; /* Show submenu when hovering */
+  }
+
+  /* 2nd-level submenu for Behandlungen */
+  .menu-item .submenu li {
+    position: relative;
+  }
+
+  .menu-item .submenu li .submenu {
+    left: 100%;
+    top: 0;
+    display: none;
+  }
+
+  .menu-item .submenu li:hover .submenu {
+    display: block;
+  }
+</style>

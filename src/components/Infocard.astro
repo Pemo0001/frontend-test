@@ -1,6 +1,28 @@
-<div class="Infocard">
-  <img src="public/9outof10.svg" />
-  <h3>Long term sustained improvement</h3>
-  <p>9 out of 10 respondents experienced sustained disease control in clinical trials 10, providing sustained improvements in the burden of disease(1,2, 1, 8*†‡).</p>
-  <a href="">See efficacy and trial data</a>
+---
+const { infocard_img } = Astro.props;
+const { infocard_h } = Astro.props;
+const { infocard_p } = Astro.props;
+const { infocard_a } = Astro.props;
+---
+
+<div class="infocard">
+  <img src={infocard_img} />
+  <h3>{infocard_h}</h3>
+  <p>{infocard_p}</p>
+  <a href="">{infocard_a}</a>
 </div>
+
+<style>
+  .infocard {
+    width: 278px;
+    text-align: center;
+    margin-top: 75px;
+    margin-bottom: 97px;
+  }
+
+  .infocard h3,
+  p,
+  a {
+    margin-bottom: 1rem;
+  }
+</style>

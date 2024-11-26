@@ -2,14 +2,60 @@
 import Button from "../components/Button.astro";
 ---
 
-<h2>Adtralza® neutralizes IL-13, a key driver of Atopic Dermatitis signs and symptoms.</h2>
-<div class="grid_1_1">
-  <div class="grid_item">
-    <p>By specifically targeting the IL-13 cytokine, Adtralza® inhibits the interaction with type II receptors and prevents IL-13-induced inflammatory responses in the skin(1,2). Adtralza® selectively modulates the dysregulated immune system by(1): — Reducing markers of skin inflammation — Improving markers of skin barrier integrity — Reducing epidermal thickness</p>
-    <Button />
-    <p>Duration: 2:43</p>
+<section class="watchvideosection">
+  <h2>Adtralza® neutralizes IL-13, a key driver of Atopic Dermatitis signs and symptoms.</h2>
+  <div class="grid_1_1">
+    <div class="flex_item">
+      <p>By specifically targeting the IL-13 cytokine, Adtralza® inhibits the interaction with type II receptors and prevents IL-13-induced inflammatory responses in the skin(1,2).</p><p>Adtralza® selectively modulates the dysregulated immune system by(1):</p><ul><li>— Reducing markers of skin inflammation</li><li>— Improving markers of skin barrier integrity</li><li>— Reducing epidermal thickness</li></ul>
+      <a href=""><Button>Watch video</Button></a>
+      <p class="duration">Duration: 2:43</p>
+    </div>
+    <div class="flex_item">
+      <img src="public/adtralza-chemistry.png" />
+    </div>
   </div>
-  <div class="grid_item">
-    <img src="public/adtralza-chemistry.png" />
-  </div>
-</div>
+
+  <style>
+    p {
+      margin: 0.5rem 0;
+    }
+    .watchvideosection {
+      background-color: #eee;
+      padding: 30px;
+    }
+
+    .duration {
+      font-size: 0.875rem;
+    }
+
+    ul {
+      margin: 1.5rem 0;
+    }
+
+    h2 {
+      margin-bottom: 2rem;
+    }
+    @media only screen and (min-width: 1200px) {
+      .watchvideosection {
+        padding: 91px;
+      }
+      h2 {
+        max-width: 1082px;
+        margin: 0 auto;
+        margin-bottom: 2rem;
+      }
+      .grid_1_1 {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 2rem;
+        max-width: 1082px;
+        margin: 0 auto;
+      }
+
+      .flex_item {
+        display: flex;
+        flex-direction: column;
+      }
+    }
+  </style>
+</section>
