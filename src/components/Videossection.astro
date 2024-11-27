@@ -53,10 +53,6 @@
   }
 
   .flex_item {
-    display: flex;
-    flex-direction: horizontal;
-    align-items: center;
-    gap: 2rem;
     margin-bottom: 66px;
     margin-right: 2rem;
   }
@@ -72,6 +68,25 @@
   h3 {
     color: #00609c;
     font-size: 1rem;
+    margin-top: 1rem;
+  }
+
+  iframe {
+    width: 100%;
+  }
+
+  @media only screen and (min-width: 600px) {
+    .flex_item {
+      display: flex;
+      flex-direction: horizontal;
+      align-items: center;
+      gap: 2rem;
+      margin-bottom: 66px;
+      margin-right: 2rem;
+    }
+    h3 {
+      margin-top: 1rem;
+    }
   }
 
   @media only screen and (min-width: 1200px) {
