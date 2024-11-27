@@ -1,4 +1,5 @@
 ---
+import "../style.css";
 import Layout from "../layouts/Layout.astro";
 import Header from "../components/Header.astro";
 import Hero from "../components/Hero.astro";
@@ -10,11 +11,13 @@ import Videossection from "../components/Videossection.astro";
 import Footer from "../components/Footer.astro";
 import Navigation from "../components/Navigation.astro";
 import References from "../components/References.astro";
+import Burgermenu from "../components/Burgermenu.astro";
 ---
 
 <Layout title="DERMAWorld" />
 <Header />
-<Navigation />
+<div class="burgermenu"><Burgermenu /></div>
+<div class="desktopnavigation"><Navigation /></div>
 <Hero />
 <Learnmore />
 <div class="infocard_grid">

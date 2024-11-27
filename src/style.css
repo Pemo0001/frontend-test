@@ -81,6 +81,10 @@ ul li {
   padding-right: 2rem;
 }
 
+.desktopnavigation {
+  display: none;
+}
+
 @keyframes fadeIn {
   0% {
     opacity: 0;
@@ -111,5 +115,13 @@ ul li {
   .clinicaltools {
     margin: 0;
     padding: 121px 0;
+  }
+
+  .desktopnavigation {
+    display: block;
+  }
+
+  .burgermenu {
+    display: none;
   }
 }
